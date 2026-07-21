@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif; /* ตั้งค่าฟอนต์หลัก */
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัดเพื่อให้อ่านง่าย */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* สีพื้นหลังของเว็บ */
+    color: #333; /* สีตัวอักษรหลัก */
+}
+
+header {
+    background: #17468C; /* สีพื้นหลังของส่วนหัว */
+    color: white; /* สีข้อความ */
+    padding: 20px 0; /* ระยะห่างด้านบนและล่าง */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0; /* ตั้งค่าระยะห่างของข้อความรอง */
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* จำกัดความกว้างของเนื้อหา */
+    background: white; /* พื้นหลังสีขาว */
+    border-radius: 8px; /* ทำให้ขอบมน */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเบา ๆ */
+}
+
+h2 {
+    color: #17468C; /* สีของหัวข้อ */
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+ul {
+    list-style-type: square; /* ใช้จุดสี่เหลี่ยมแทนจุดกลม */
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333; /* สีพื้นหลังเข้ม */
+    color: white;
+    margin-top: 20px;
+}
