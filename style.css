@@ -1,58 +1,214 @@
-body {
-    font-family: Arial, sans-serif; /* ตั้งค่าฟอนต์หลัก */
-    line-height: 1.6; /* ระยะห่างระหว่างบรรทัดเพื่อให้อ่านง่าย */
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4; /* สีพื้นหลังของเว็บ */
-    color: #333; /* สีตัวอักษรหลัก */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Kanit',sans-serif;
 }
 
-header {
-    background: #17468C; /* สีพื้นหลังของส่วนหัว */
-    color: white; /* สีข้อความ */
-    padding: 20px 0; /* ระยะห่างด้านบนและล่าง */
-    text-align: center; /* จัดข้อความกึ่งกลาง */
+body{
+    background:#f5f9ff;
+    color:#333;
 }
 
-header h1 {
-    margin: 0;
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#0B3C91;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    z-index:1000;
 }
 
-header p {
-    margin: 5px 0 0; /* ตั้งค่าระยะห่างของข้อความรอง */
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#FFD700;
 }
 
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px; /* จำกัดความกว้างของเนื้อหา */
-    background: white; /* พื้นหลังสีขาว */
-    border-radius: 8px; /* ทำให้ขอบมน */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเบา ๆ */
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
 }
 
-h2 {
-    color: #17468C; /* สีของหัวข้อ */
+nav a:hover{
+    color:#FFD700;
 }
 
-.project {
-    margin-bottom: 20px;
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+    padding:120px 8% 80px;
+    background:linear-gradient(135deg,#0B3C91,#4FA3FF);
+    color:white;
 }
 
-.project h3 {
-    margin: 0 0 10px;
-    color: #333;
+.hero-left{
+    max-width:600px;
 }
 
-ul {
-    list-style-type: square; /* ใช้จุดสี่เหลี่ยมแทนจุดกลม */
-    padding-left: 20px;
+.hero h1{
+    font-size:58px;
+    margin-bottom:20px;
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333; /* สีพื้นหลังเข้ม */
-    color: white;
-    margin-top: 20px;
+.hero span{
+    color:#FFD700;
+}
+
+.hero p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    background:#FFD700;
+    color:#0B3C91;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+}
+
+.hero-right img{
+    width:350px;
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+section{
+    padding:100px 8%;
+}
+
+section h2{
+    text-align:center;
+    font-size:40px;
+    color:#0B3C91;
+    margin-bottom:40px;
+}
+
+.about-box{
+    display:flex;
+    gap:40px;
+    align-items:center;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.about-box img{
+    width:250px;
+    border-radius:20px;
+}
+
+.timeline{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    width:320px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.card h3{
+    color:#0B3C91;
+    margin-bottom:10px;
+}
+
+.sop-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    line-height:2;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.contact{
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+footer{
+    background:#0B3C91;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.hero-right img{
+    width:250px;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.about-box{
+    flex-direction:column;
+}
+
 }
